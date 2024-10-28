@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZALIYAN Restaurant</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: rgb(134, 95, 56);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img#header-img {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            color:rgb(134, 95, 56);
+        }
+        .menu-item {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .menu-item img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .menu-item p {
+            font-style: italic;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgb(205, 167, 134);
+            color: white;
+        }
+        input[type="submit"] {
+            background-color: rgb(100, 87, 83);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+<header>
+    <img src="zaliyan.jpg" alt="Restaurant Logo" id="header-img">
+    <b><u><h1>ZALIYAN Restaurant</h1></u></b>
+    <nav>
+       <u><a href="#menu">Menu</a></u> 
+        <u><a href="#order-form">Place Your Order</a></u>
+    </nav>
+</header>
+
+<main>
+    <!-- Menu Section -->
+    <section id="menu">
+        <center><u><h2>Menu</h2></u></center>
+
+        <article class="menu-item">
+            <img src="https://cdn.loveandlemons.com/wp-content/uploads/2023/07/margherita-pizza-recipe-580x826.jpg" alt="Pizza">
+            <div>
+                <h3>Margherita Pizza</h3>
+                <p>A classic Italian pizza topped with fresh mozzarella, tomatoes, and basil. <i>$12.99</i></p>
+            </div>
+        </article>
+
+        <article class="menu-item">
+            <img src="https://s7d1.scene7.com/is/image/mcdonalds/DC_202302_0005-999_BigMac_1564x1564-1?wid=1000&hei=1000&dpr=off" alt="Burger">
+            <div>
+                <h3>Cheeseburger Deluxe</h3>
+                <p>Juicy beef patty topped with cheddar cheese, lettuce, and tomato. <i>$10.99</i></p>
+            </div>
+        </article>
+
+        <article class="menu-item">
+            <img src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-jumbo-v2.jpg?quality=75&auto=webp" alt="Pasta">
+            <div>
+                <h3>Spaghetti Carbonara</h3>
+                <p>Traditional spaghetti with creamy sauce, bacon, and Parmesan cheese. <i>$13.99</i></p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order-form">
+        <h2>Place Your Order</h2>
+        <form action="/submit-order" method="post">
+            <!-- Pizza order -->
+            <div>
+                <label for="pizza-quantity">Margherita Pizza - $12.99</label>
+                <input type="number" id="pizza-quantity" name="pizza-quantity" min="0" max="10" value="0">
+            </div>
+
+            <!-- Burger order -->
+            <div>
+                <label for="burger-quantity">Cheeseburger Deluxe - $10.99</label>
+                <input type="number" id="burger-quantity" name="burger-quantity" min="0" max="10" value="0">
+            </div>
+
+            <!-- Pasta order -->
+            <div>
+                <label for="pasta-quantity">Spaghetti Carbonara - $13.99</label>
+                <input type="number" id="pasta-quantity" name="pasta-quantity" min="0" max="10" value="0">
+            </div>
+
+            <!-- Add-ons -->
+            <div>
+                <label>Sides and Add-ons</label>
+                <input type="checkbox" id="side-salad" name="side-salad">
+                <label for="side-salad">Side Salad (+$4.99)</label><br>
+                <input type="checkbox" id="extra-cheese" name="extra-cheese">
+                <label for="extra-cheese">Extra Cheese (+$1.50)</label>
+            </div>
+
+            <!-- Special requests -->
+            <div>
+                <label for="special-requests">Special Requests</label>
+                <textarea id="special-requests" name="special-requests" rows="4" cols="50" placeholder="Any special requests?"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div>
+                <input type="submit" value="Go To Checkout">
+            </div>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>Made with love by Abdul_Ahad@pro
